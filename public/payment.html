@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Donacion</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <form action="#" method="POST" id="card-form" role="form" class="well form-horizontal">
+                <table class="table table-striped">
+                    <tbody>
+                        <tr>
+                            <td colspan="1">
+                                <fieldset>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label">Nombre Completo</label>
+                                        <div class="col-md-8 inputGroupContainer">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="glyphicon glyphicon-user"></i>
+                                                </span>
+                                                <input id="fullName" name="fullName" placeholder="Nombre Completo" class="form-control" required="true" value="" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label">Calle y n&uacute;mero</label>
+                                        <div class="col-md-8 inputGroupContainer">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="glyphicon glyphicon-home"></i>
+                                                </span>
+                                                <input id="addressLine1" placeholder="Calle y n&uacute;mero" class="form-control" data-conekta="card[address][street1] required="true type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label">Colonia</label>
+                                        <div class="col-md-8 inputGroupContainer">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="glyphicon glyphicon-home"></i>
+                                                </span>
+                                                <input id="addressLine2" placeholder="Colonia" class="form-control" required="true" data-conekta="card[address][street2] type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label">Ciudad</label>
+                                        <div class="col-md-8 inputGroupContainer">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="glyphicon glyphicon-home"></i>
+                                                </span>
+                                                <input id="city" placeholder="Ciudad" class="form-control" required="true" data-conekta="card[address][city] type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label">Estado</label>
+                                        <div class="col-md-8 inputGroupContainer">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="glyphicon glyphicon-home"></i>
+                                                </span>
+                                                <input id="state" placeholder="Estado" class="form-control" required="true" data-conekta="card[address][state] type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label">C&oacute;digo Postal</label>
+                                        <div class="col-md-8 inputGroupContainer">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="glyphicon glyphicon-home"></i>
+                                            </span>
+                                            <input id="postcode" placeholder="C&oacute;digo Postal" class="form-control" required="true" data-conekta="card[address][zip] type="text">
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label">Pa&iacute;s</label>
+                                        <div class="col-md-8 inputGroupContainer">
+                                            <div class="input-group">
+                                                <span class="input-group-addon" style="max-width: 100%;"><i class="glyphicon glyphicon-list"></i></span>
+                                                <select class="selectpicker form-control" id="country" data-conekta="card[address][country]">
+                                                    <option value="MX">M&eacute;xico</option>
+                                                    <option value="US">USA</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label">Email</label>
+                                        <div class="col-md-8 inputGroupContainer">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="glyphicon glyphicon-envelope"></i>
+                                                </span>
+                                                <input id="email" name="email" placeholder="Email" class="form-control" required="true" value="" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label">Tel&eacute;fono</label>
+                                        <div class="col-md-8 inputGroupContainer">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="glyphicon glyphicon-earphone"></i>
+                                                </span>
+                                                <input id="phoneNumber" name="phoneNumber" placeholder="Tel&eacute;fono" class="form-control" required="true" value="" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="form-group">
+                                        <label class="col-md-4 control-label">Fecha de Nacimiento</label>
+                                        <div class="col-md-8 inputGroupContainer">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="glyphicon glyphicon-calendar"></i>
+                                                </span>
+                                                <input id="bornDate" name="bornDate" placeholder="Fecha de Nacimiento" class="form-control" required="true" type="text">
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label">RFC</label>
+                                        <div class="col-md-8 inputGroupContainer">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="glyphicon glyphicon-briefcase"></i>
+                                                </span>
+                                                <input id="rfc" name="rfc" placeholder="RFC" class="form-control" required="true" value="" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </td>
+                            <td colspan="1">
+                                <fieldset>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label">Cantidad a donar</label>
+                                        <div class="col-md-8 inputGroupContainer">
+                                            <div class="input-group">
+                                                <span class="input-group-addon" style="max-width: 100%;"><i class="glyphicon glyphicon-usd"></i></span>
+                                                <select class="selectpicker form-control" id="quantity" name="quantity">
+                                                    <option value="10000">100</option>
+                                                    <option value="50000">500</option>
+                                                    <option value="250000">2500</option>
+                                                    <option value="1000000">10000</option>
+                                                    <option value="2500000">25000</option>
+                                                    <option value="5000000">50000</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label">Tipo de cambio</label>
+                                        <div class="col-md-8 inputGroupContainer">
+                                            <div class="input-group">
+                                                <span class="input-group-addon" style="max-width: 100%;"><i class="glyphicon glyphicon-usd"></i></span>
+                                                <select class="selectpicker form-control" id="currency" name="currency">
+                                                    <option value="MXN">MXN</option>
+                                                    <option value="USD">USD</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label">Nombre del tarjetahabiente</label>
+                                        <div class="col-md-8 inputGroupContainer">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="glyphicon glyphicon-credit-card"></i>
+                                                </span>
+                                                <input id="nombretarjetahabiente" class="form-control" required="true" type="text" data-conekta="card[name]">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label">N&uacute;mero de la tarjeta de cr&eacute;dito</label>
+                                        <div class="col-md-8 inputGroupContainer">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="glyphicon glyphicon-credit-card"></i>
+                                                </span>
+                                                <input id="cardNumber" class="form-control" required="true" type="text" data-conekta="card[number]">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label">CVC</label>
+                                        <div class="col-md-8 inputGroupContainer">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="glyphicon glyphicon-credit-card"></i>
+                                                </span>
+                                                <input id="cvc" class="form-control" required="true" type="text" data-conekta="card[cvc]">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label">Fecha de expiración (MM/AAAA)</label>
+                                        <div class="col-md-8 inputGroupContainer">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="glyphicon glyphicon-calendar"></i>
+                                                </span>
+                                                <input id="cardMonth" type="text" size="2" data-conekta="card[exp_month]"/>
+                                                <span>/</span>
+                                                <input id="cardYear" type="text" size="4" data-conekta="card[exp_year]"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-8 inputGroupContainer">
+                                            <button id="processPayment" class="btn btn-success" type="submit">Procesar pago</button>
+                                            <span class="card-errors alert-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-8 inputGroupContainer">
+                                            <img alt="Visa Checkout" class="v-button" role="button" src="https://sandbox.secure.checkout.visa.com/wallet-services-web/xo/button.png"/>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script type="text/javascript" src="https://cdn.conekta.io/js/latest/conekta.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://sandbox-assets.secure.checkout.visa.com/checkout-widget/resources/js/integration/v1/sdk.js"></script>
+        <!-- <script type="text/javascript" src="https://request.eprotect.vantivprelive.com/eProtect/eProtect-api3.js"></script>  -->
+        <script type="text/javascript" src="/js/scripts.js"></script>
+    </body>
+</html>
